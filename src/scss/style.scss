@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px #aaa;
+
+  div {
+    display: flex;
+    width: 100%;
+
+    flex-direction: row-reverse;
+    align-items: flex-start;
+
+    @media screen and (min-width: 40em) {
+      align-items: center;
+    }
+    ul {
+      list-style: none;
+      display: none;
+      flex-direction: column;
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+      @media screen and (min-width: 40em) {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+      }
+      li {
+        text-align: center;
+        a {
+          color: #222;
+          display: block;
+          line-height: 1rem;
+          padding: 1rem;
+          text-decoration: none;
+
+          &:hover {
+            cursor: pointer;
+            background: #efefef;
+          }
+        }
+      }
+    }
+    input[type="checkbox"] {
+      display: none;
+
+      &:checked + ul {
+        display: flex;
+      }
+    }
+    label {
+      align-items: center;
+      display: flex;
+      cursor: pointer;
+      height: 1.5rem;
+      width: 1.5rem;
+      padding: 0.75rem;
+      flex-wrap: wrap;
+
+      @media screen and (min-width: 40rem) {
+        display: none;
+      }
+    }
+    span {
+      background: #222;
+      display: block;
+      width: 1.5rem;
+      height: 2px;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px #aaa;
+}
+nav div {
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+}
+@media screen and (min-width: 40em) {
+  nav div {
+    align-items: center;
+  }
+}
+nav div ul {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+@media screen and (min-width: 40em) {
+  nav div ul {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+}
+nav div ul li {
+  text-align: center;
+}
+nav div ul li a {
+  color: #222;
+  display: block;
+  line-height: 1rem;
+  padding: 1rem;
+  text-decoration: none;
+}
+nav div ul li a:hover {
+  cursor: pointer;
+  background: #efefef;
+}
+nav div input[type=checkbox] {
+  display: none;
+}
+nav div input[type=checkbox]:checked + ul {
+  display: flex;
+}
+nav div label {
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0.75rem;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 40rem) {
+  nav div label {
+    display: none;
+  }
+}
+nav div span {
+  background: #222;
+  display: block;
+  width: 1.5rem;
+  height: 2px;
+}
+
+/*# sourceMappingURL=style.css.map */
