@@ -1,13 +1,12 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
+@use 'modules/modules' as m;
+
+
 
 .nav {
   display: flex;
   justify-content: center;
-  background-color: #fff;
-  box-shadow: 0 0 10px #aaa;
+  background-color:m.$nav-background-color;
+  box-shadow: 0 0 10px m.$nav-shadow-color;
 
   &__container {
     display: flex;
@@ -40,7 +39,7 @@ body {
   }
 
   &__link {
-    color: #222;
+    color: m.$link-color;
     display: block;
     line-height: 1rem;
     padding: 1rem;
@@ -48,7 +47,8 @@ body {
 
     &:hover {
       cursor: pointer;
-      background: #efefef;
+      color: m.$link-hover-color;
+      background: m.$link-hover-background-color;
     }
   }
 
@@ -76,7 +76,7 @@ body {
     }
 
     &-line {
-      background: #222;
+      background: m.$link-color;
       display: block;
       width: 1.5rem;
       height: 2px;
